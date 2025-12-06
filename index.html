@@ -2,31 +2,30 @@
 <html lang="pt">
 <head>
   <meta charset="UTF-8">
-  <title>3 passos simples para apoiar a pressão arterial depois dos 40</title>
+  <title>3 passos simples para apoiar o bem-estar da pressão arterial depois dos 40</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Artigo informativo sobre hábitos simples que podem apoiar o bem-estar da pressão arterial depois dos 40 anos.">
+
   
-  <!-- TikTok Pixel (обовʼязково встав у себе у <head>, якщо ще не вставив) -->
   <script>
     !function (w, d, t) {
       w.TiktokAnalyticsObject = t; var ttq = w[t] = w[t] || [];
-      ttq.methods = ["page", "track", "identify", "instances", "debug", "on", "off", "once", "ready", "alias", "group", "enableCookie", "disableCookie"],
+      ttq.methods = ["page", "track", "identify", "instances", "debug", "on", "off", "once", "ready", "alias", "group", "enableCookie", "disableCookie"];
       ttq.setAndDefer = function (t, e) { t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } };
       for (var i = 0; i < ttq.methods.length; i++) ttq.setAndDefer(ttq, ttq.methods[i]);
       ttq.instance = function (t) {
-        for (var e = ttq._i[t] || [], n = 0; ttq.methods.length > n; n++
-        )ttq.setAndDefer(e, ttq.methods[n]); return e
-      },
+        for (var e = ttq._i[t] || [], n = 0; ttq.methods.length > n; n++) ttq.setAndDefer(e, ttq.methods[n]);
+        return e;
+      };
       ttq.load = function (e, n) {
         var i = "https://analytics.tiktok.com/i18n/pixel/events.js";
-        ttq._i = ttq._i || {}, ttq._i[e] = [], ttq._i[e]._u = i, ttq._t = ttq._t || {}, 
-        ttq._t[e] = +new Date, ttq._o = ttq._o || {}, ttq._o[e] = n || {};
-        var o = document.createElement("script"); o.type = "text/javascript", 
-        o.async = !0, o.src = i + "?sdkid=" + e + "&lib=" + t;
+        ttq._i = ttq._i || {}, ttq._i[e] = [], ttq._i[e]._u = i, ttq._t = ttq._t || {}, ttq._t[e] = +new Date, ttq._o = ttq._o || {}, ttq._o[e] = n || {};
+        var o = document.createElement("script");
+        o.type = "text/javascript", o.async = !0, o.src = i + "?sdkid=" + e + "&lib=" + t;
         var a = document.getElementsByTagName("script")[0];
-        a.parentNode.insertBefore(o, a)
+        a.parentNode.insertBefore(o, a);
       };
-      ttq.load('YOUR_PIXEL_ID_HERE'); // ← заміни на свій Pixel ID
+      ttq.load('D4PP66BC77UDACR1R5S0');  
       ttq.page();
     }(window, document, 'ttq');
   </script>
@@ -54,16 +53,29 @@
       margin-top: 24px;
       margin-bottom: 10px;
     }
+    h3 {
+      font-size: 18px;
+      margin-top: 18px;
+      margin-bottom: 8px;
+    }
     p {
       margin: 10px 0;
     }
     ul {
       padding-left: 20px;
+      margin: 10px 0;
     }
     .tagline {
       color: #666;
       font-size: 14px;
       margin-bottom: 18px;
+    }
+    .section-label {
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      color: #999;
+      margin-bottom: 4px;
     }
     .highlight-box {
       background: #f0f7ff;
@@ -73,35 +85,9 @@
       margin: 16px 0;
       font-size: 14px;
     }
-    .cta-btn {
-      display: block;
-      width: 100%;
-      text-align: center;
-      background: #ff4747;
-      color: #fff;
-      text-decoration: none;
-      padding: 14px 12px;
-      border-radius: 10px;
-      font-weight: 600;
-      font-size: 18px;
-      margin: 22px 0 8px;
-      box-shadow: 0 8px 18px rgba(0,0,0,0.12);
-      transition: 0.08s;
-    }
-    .cta-btn:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 10px 22px rgba(0,0,0,0.16);
-      background: #ff3a3a;
-    }
-    .cta-note {
-      font-size: 12px;
+    .small-note {
+      font-size: 13px;
       color: #777;
-      text-align: center;
-      margin-bottom: 12px;
-    }
-    .divider {
-      border-top: 1px solid #eee;
-      margin: 26px 0 18px;
     }
     .step {
       background: #fafafa;
@@ -116,15 +102,51 @@
       margin-bottom: 4px;
       font-size: 14px;
     }
+    .tip {
+      font-size: 14px;
+      color: #555;
+      margin-top: 6px;
+    }
+    .divider {
+      margin: 26px 0 18px;
+      border: none;
+      border-top: 1px solid #eee;
+    }
+    .cta-btn {
+      display: block;
+      width: 100%;
+      text-align: center;
+      background: #ff4747;
+      color: #fff;
+      text-decoration: none;
+      padding: 14px 12px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 18px;
+      margin: 22px 0 8px;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+      transition: transform 0.08s ease, box-shadow 0.08s ease, background 0.08s ease;
+    }
+    .cta-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 22px rgba(0,0,0,0.16);
+      background: #ff3a3a;
+    }
+    .cta-note {
+      font-size: 12px;
+      color: #777;
+      text-align: center;
+      margin-bottom: 12px;
+    }
 
-    /* Плаваюча CTA (тільки мобілка) */
+    /* Плаваюча CTA для мобільних */
     .floating-cta {
       position: fixed;
       left: 0;
       right: 0;
       bottom: 0;
       padding: 10px 16px 14px;
-      background: rgba(255,255,255,0.96);
+      background: rgba(255,255,255,0.97);
       box-shadow: 0 -4px 14px rgba(0,0,0,0.12);
       z-index: 999;
     }
@@ -145,6 +167,7 @@
       text-align: center;
       margin-top: 4px;
     }
+
     @media (min-width: 900px) {
       .floating-cta {
         display: none;
@@ -158,63 +181,162 @@
 <body>
 
   <div class="page">
-
-    <h1>3 passos simples para apoiar a pressão arterial depois dos 40</h1>
-    <p class="tagline">Pequenas mudanças podem ter grande impacto no bem-estar diário.</p>
+    <div class="section-label">Saúde depois dos 40</div>
+    <h1>3 passos simples para apoiar o bem-estar da pressão arterial depois dos 40</h1>
+    <p class="tagline">
+      Pequenas mudanças diárias, aliadas a apoio extra quando necessário, podem fazer diferença na forma como nos sentimos no dia a dia.
+    </p>
 
     <div class="highlight-box">
-      <strong>Aviso:</strong> Artigo informativo. Não substitui orientação médica profissional.
+      <strong>Aviso importante:</strong> Este texto tem caráter informativo e não substitui o acompanhamento de um profissional de saúde.
+      Em caso de dúvidas sobre a sua pressão arterial ou medicação, fale sempre com o seu médico.
     </div>
 
-    <p>Muitas pessoas em Portugal após os 40 começam a notar que a pressão arterial reage a stress, sono e alimentação...</p>
+    <p>
+      Depois dos 40 anos, muitas pessoas em Portugal começam a notar que o corpo reage de maneira diferente ao cansaço,
+      ao stress, ao sono irregular e à alimentação mais rápida. Em vez de ignorar estes sinais, cada vez mais pessoas preferem
+      fazer ajustes simples na rotina para apoiar o bem-estar geral – especialmente quando o assunto é pressão arterial.
+    </p>
+
+    <p>
+      Neste artigo, reunimos três passos práticos que muitas pessoas acima dos 40 têm adotado no dia a dia.
+      No final, também deixamos um link para uma página oficial com mais informações sobre uma solução natural,
+      utilizada como apoio diário por quem quer cuidar melhor da pressão arterial e da sensação de conforto.
+    </p>
 
     <!-- CTA 1 -->
-    <a href="https://pt-118-med.lifeblogeu.com/?utm_source=250581&utm_medium=cpc&utm_campaign=ww_nutra&utm_content=ad1&utm_term=age35-75+" class="cta-btn" onclick="ttq.track('SubmitForm')">
-      Ver a solução recomendada para apoiar a pressão arterial
+    <a
+      href="https://pt-118-med.lifeblogeu.com/?utm_source=250581&amp;utm_medium=cpc&amp;utm_campaign=ww_nutra&amp;utm_content=ad1&amp;utm_term=age35-75+"
+      class="cta-btn"
+      onclick="ttq.track('SubmitForm')"
+    >
+      Ver solução natural que muitos adultos depois dos 40 estão a avaliar
     </a>
-    <div class="cta-note">Sem compromisso: página oficial com mais detalhes.</div>
+    <div class="cta-note">
+      Página oficial com informação detalhada sobre o apoio diário à pressão arterial.
+    </div>
 
     <hr class="divider">
 
-    <h2>1. Ajustar a alimentação</h2>
+    <h2>1. Pequenos ajustes na alimentação de todos os dias</h2>
     <div class="step">
       <div class="step-number">Passo 1</div>
-      <p>Reduzir sal, aumentar potássio e consumir alimentos naturais...</p>
+      <p>
+        Não é obrigatório seguir uma dieta perfeita para começar a cuidar melhor da pressão. Em muitos casos, pequenos ajustes
+        já trazem impacto positivo na sensação de bem-estar: reduzir um pouco o sal na comida, evitar exageros em alimentos muito
+        processados e incluir mais alimentos frescos no prato.
+      </p>
+      <p>
+        Legumes, frutas, verduras, azeite de boa qualidade e fontes de potássio (como banana, feijão, batata e frutos secos sem sal)
+        costumam aparecer com frequência em planos alimentares focados em saúde cardiovascular e equilíbrio.
+      </p>
+      <p class="tip">
+        Dica prática: em vez de adicionar mais sal à refeição pronta, experimente temperar com ervas, alho, cebola, limão ou especiarias.
+        Muitas pessoas relatam que, ao fim de algum tempo, o paladar se adapta e passa a gostar de sabores menos salgados.
+      </p>
     </div>
 
-    <!-- CTA 2 -->
-    <a href="https://pt-118-med.lifeblogeu.com/?utm_source=250581&utm_medium=cpc&utm_campaign=ww_nutra&utm_content=ad1&utm_term=age35-75+" class="cta-btn" onclick="ttq.track('SubmitForm')">
-      Quero ver mais detalhes desta solução natural
-    </a>
-
-    <h2>2. Movimento regular</h2>
+    <h2>2. Movimento moderado, mas com regularidade</h2>
     <div class="step">
       <div class="step-number">Passo 2</div>
-      <p>Caminhadas leves 3–4 vezes por semana podem ajudar muito...</p>
+      <p>
+        A atividade física moderada é um dos aliados clássicos do bem-estar geral. Não é preciso começar com treinos intensos nem
+        realizar exercícios para os quais o corpo não está preparado. Caminhadas de 20–30 minutos, alguns dias por semana, já são
+        um ponto de partida para muita gente.
+      </p>
+      <p>
+        O mais importante costuma ser a regularidade: escolher uma forma de se mexer que faça sentido na rotina, como caminhar no bairro,
+        subir escadas em vez de usar o elevador, pedalar ao fim do dia ou fazer alongamentos simples em casa.
+      </p>
+      <p class="tip">
+        Se tem qualquer condição de saúde já diagnosticada, é essencial conversar com o seu médico antes de alterar de forma significativa
+        o nível de atividade física.
+      </p>
     </div>
 
-    <h2>3. Apoio adicional diário</h2>
+    <!-- CTA 2 (no meio da página) -->
+    <a
+      href="https://pt-118-med.lifeblogeu.com/?utm_source=250581&amp;utm_medium=cpc&amp;utm_campaign=ww_nutra&amp;utm_content=ad1&amp;utm_term=age35-75+"
+      class="cta-btn"
+      onclick="ttq.track('SubmitForm')"
+    >
+      Ver mais detalhes sobre apoio natural utilizado em Portugal
+    </a>
+    <div class="cta-note">
+      Sem compromisso: trata-se de uma página informativa sobre um apoio diário que algumas pessoas adicionam à rotina.
+    </div>
+
+    <h2>3. Cuidar do sono, do stress e considerar apoio adicional</h2>
     <div class="step">
       <div class="step-number">Passo 3</div>
-      <p>Há soluções naturais usadas por muitas pessoas depois dos 40...</p>
+      <p>
+        O corpo não responde apenas ao que comemos e à quantidade de movimento, mas também ao descanso e ao stress diário.
+        Noites mal dormidas, preocupações constantes e excesso de estimulantes (como café em grandes quantidades ou tabaco)
+        podem influenciar a forma como nos sentimos e como a pressão arterial se comporta ao longo do dia.
+      </p>
+      <p>
+        Por isso, muitas pessoas procuram fazer um “ajuste de equilíbrio”: tentar criar uma rotina de sono mais regular,
+        reservar alguns minutos para relaxar (com leitura, respiração profunda ou pequenas pausas) e rever hábitos que possam
+        estar a sobrecarregar o organismo.
+      </p>
+      <p>
+        Além dessas mudanças, é comum que alguns adultos em Portugal optem por incluir um apoio adicional sob a forma de solução
+        natural, pensada para ser usada diariamente em conjunto com um estilo de vida equilibrado. Este tipo de apoio não substitui
+        o acompanhamento médico, mas pode ser avaliado como parte de um cuidado global com a pressão arterial.
+      </p>
+      <p class="tip">
+        Antes de iniciar qualquer suplemento ou produto, é importante ler cuidadosamente as informações oficiais e, em caso de dúvida,
+        pedir orientação a um profissional de saúde.
+      </p>
     </div>
 
     <hr class="divider">
 
-    <!-- CTA 3 / фінальна кнопка -->
-    <a href="https://pt-118-med.lifeblogeu.com/?utm_source=250581&utm_medium=cpc&utm_campaign=ww_nutra&utm_content=ad1&utm_term=age35-75+" class="cta-btn" onclick="ttq.track('SubmitForm')">
+    <h3>Porque é que algumas pessoas procuram uma solução natural específica?</h3>
+    <p>
+      Com o passar dos anos, é natural querer sentir mais segurança em relação à pressão arterial e ao bem-estar diário. Muitas pessoas
+      preferem opções que combinam ajustes na alimentação, exercício moderado e um apoio adicional com ingredientes de origem natural.
+    </p>
+    <p>
+      Em Portugal, existe uma solução desenvolvida precisamente com esse objetivo: ser utilizada como parte da rotina de quem deseja
+      apoiar o equilíbrio da pressão arterial e sentir maior conforto no dia a dia. Na página oficial, é possível encontrar detalhes
+      sobre composição, modo de utilização e opiniões de outros consumidores.
+    </p>
+    <p>
+      Se sente curiosidade em conhecer melhor esse tipo de apoio, pode visitar a página oficial através do botão abaixo e ler todas
+      as informações com calma, de forma direta na fonte.
+    </p>
+
+    <!-- CTA 3 – финальная кнопка -->
+    <a
+      href="https://pt-118-med.lifeblogeu.com/?utm_source=250581&amp;utm_medium=cpc&amp;utm_campaign=ww_nutra&amp;utm_content=ad1&amp;utm_term=age35-75+"
+      class="cta-btn"
+      onclick="ttq.track('SubmitForm')"
+    >
       Aceder à página oficial da solução recomendada
     </a>
-    <div class="cta-note">Informação completa no site oficial.</div>
+    <div class="cta-note">
+      Informação completa, modo de utilização e condições atuais diretamente no site oficial.
+    </div>
 
+    <p class="small-note">
+      Nota: Este artigo não pretende diagnosticar, tratar ou curar qualquer doença. A pressão arterial deve ser acompanhada por um
+      profissional de saúde qualificado. Em caso de sintomas, dúvidas ou alterações na medicação, fale sempre com o seu médico.
+    </p>
   </div>
 
-  <!-- Floating CTA -->
+  <!-- Плаваюча кнопка для мобільних -->
   <div class="floating-cta">
-    <a href="https://pt-118-med.lifeblogeu.com/?utm_source=250581&utm_medium=cpc&utm_campaign=ww_nutra&utm_content=ad1&utm_term=age35-75+" class="floating-cta__btn" onclick="ttq.track('SubmitForm')">
+    <a
+      href="https://pt-118-med.lifeblogeu.com/?utm_source=250581&amp;utm_medium=cpc&amp;utm_campaign=ww_nutra&amp;utm_content=ad1&amp;utm_term=age35-75+"
+      class="floating-cta__btn"
+      onclick="ttq.track('SubmitForm')"
+    >
       Ver solução recomendada para pressão arterial
     </a>
-    <div class="floating-cta__note">More detalhes na página oficial.</div>
+    <div class="floating-cta__note">
+      Página oficial com mais detalhes e condições atuais.
+    </div>
   </div>
 
 </body>
