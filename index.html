@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <title>3 passos simples para apoiar a pressão arterial depois dos 40</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: #f3f4f6;
+      --card-bg: #ffffff;
+      --accent: #16a34a;
+      --accent-soft: #dcfce7;
+      --text-main: #111827;
+      --text-muted: #4b5563;
+      --border-subtle: #e5e7eb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      margin: 0;
+      background: radial-gradient(circle at top left, #e0f2fe 0, #f3f4f6 40%, #f9fafb 100%);
+      color: var(--text-main);
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Шапка */
+    .site-header {
+      background: rgba(15, 23, 42, 0.85);
+      color: #f9fafb;
+      padding: 10px 18px;
+      backdrop-filter: blur(14px);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    .site-header-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-icon {
+      width: 26px;
+      height: 26px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 20%, #bbf7d0, #22c55e 45%, #15803d 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 700;
+      color: #052e16;
+      box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.35);
+    }
+
+    .logo-text-main {
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      font-size: 13px;
+    }
+
+    .logo-text-sub {
+      font-size: 11px;
+      opacity: 0.75;
+    }
+
+    .header-pill {
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      display: none;
+    }
+
+    /* Контент */
+    .wrapper {
+      flex: 1;
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 24px 16px 40px;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr);
+      gap: 24px;
+    }
+
+    @media (min-width: 900px) {
+      .layout {
+        grid-template-columns: minmax(0, 3fr) minmax(260px, 1.4fr);
+      }
+      .header-pill {
+        display: inline-flex;
+      }
+    }
+
+    .card-main {
+      background: var(--card-bg);
+      border-radius: 20px;
+      padding: 24px 22px 30px;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.10);
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card-main::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top right, rgba(34, 197, 94, 0.20), transparent 55%);
+      opacity: 0.8;
+      pointer-events: none;
+    }
+
+    .tag {
+      position: relative;
+      display: inline-block;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #e0f2fe;
+      color: #0369a1;
+      margin-bottom: 10px;
+    }
+
+    .meta-row {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      margin-bottom: 12px;
+      font-size: 12px;
+      color: #6b7280;
+    }
+
+    .meta-dot {
+      width: 4px;
+      height: 4px;
+      border-radius: 999px;
+      background: #9ca3af;
+    }
+
+    h1 {
+      position: relative;
+      font-size: 26px;
+      margin: 0 0 10px;
+      line-height: 1.25;
+      color: #0f172a;
+    }
+
+    .lead {
+      position: relative;
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .hero-highlight {
+      position: relative;
+      border-radius: 14px;
+      padding: 10px 12px;
+      background: #fefce8;
+      border: 1px solid #facc15;
+      font-size: 13px;
+      color: #854d0e;
+      margin-bottom: 16px;
+    }
+
+    .section {
+      position: relative;
+      margin-top: 18px;
+    }
+
+    h2 {
+      font-size: 19px;
+      margin-top: 2px;
+      margin-bottom: 6px;
+      color: #111827;
+    }
+
+    p {
+      position: relative;
+      line-height: 1.6;
+      margin: 6px 0 10px;
+      font-size: 14px;
+      color: #111827;
+    }
+
+    .list {
+      position: relative;
+      margin: 6px 0 4px;
+      padding-left: 18px;
+      font-size: 14px;
+      color: #111827;
+    }
+
+    .list li {
+      margin-bottom: 6px;
+    }
+
+    .pill-label {
+      display: inline-block;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 3px 9px;
+      border-radius: 999px;
+      background: #eef2ff;
+      color: #4f46e5;
+      margin-bottom: 6px;
+    }
+
+    .highlight {
+      position: relative;
+      background: #eef2ff;
+      border-radius: 14px;
+      padding: 10px 12px;
+      font-size: 13px;
+      margin-top: 10px;
+      border: 1px solid rgba(129, 140, 248, 0.5);
+      color: #3730a3;
+    }
+
+    /* Блок CTA */
+    .cta-block {
+      position: relative;
+      margin-top: 26px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border-subtle);
+      text-align: center;
+    }
+
+    .cta-title {
+      font-size: 18px;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+
+    .cta-text {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 28px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #16a34a, #22c55e);
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 15px;
+      text-decoration: none;
+      box-shadow: 0 12px 22px rgba(22, 163, 74, 0.40);
+      transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease;
+      border: none;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 16px 28px rgba(22, 163, 74, 0.50);
+      opacity: 0.97;
+    }
+
+    .btn:active {
+      transform: translateY(0);
+      box-shadow: 0 8px 16px rgba(22, 163, 74, 0.35);
+    }
+
+    .footer-note {
+      position: relative;
+      margin-top: 14px;
+      font-size: 11px;
+      color: #9ca3af;
+      text-align: center;
+    }
+
+    /* Сайдбар */
+    .sidebar {
+      display: none;
+    }
+
+    @media (min-width: 900px) {
+      .sidebar {
+        display: block;
+      }
+
+      .sidebar-card {
+        position: sticky;
+        top: 76px;
+        background: rgba(15, 23, 42, 0.9);
+        color: #e5e7eb;
+        border-radius: 18px;
+        padding: 18px 16px 18px;
+        box-shadow: 0 18px 40px rgba(15, 23, 42, 0.55);
+        border: 1px solid rgba(148, 163, 184, 0.5);
+      }
+
+      .sidebar-title {
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        opacity: 0.8;
+        margin-bottom: 6px;
+      }
+
+      .sidebar-main {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+
+      .sidebar-list {
+        margin: 8px 0 6px;
+        padding-left: 16px;
+        font-size: 13px;
+        color: #e5e7eb;
+      }
+
+      .sidebar-list li {
+        margin-bottom: 4px;
+      }
+
+      .sidebar-note {
+        font-size: 11px;
+        color: #9ca3af;
+        margin-top: 6px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- Шапка -->
+    <header class="site-header">
+      <div class="site-header-inner">
+        <div class="logo">
+          <div class="logo-icon">SE</div>
+          <div>
+            <div class="logo-text-main">Saúde &amp; Equilíbrio</div>
+            <div class="logo-text-sub">Artigos sobre bem-estar depois dos 40</div>
+          </div>
+        </div>
+        <div class="header-pill">
+          Especial • Pressão &amp; coração
+        </div>
+      </div>
+    </header>
+
+    <!-- Контент -->
+    <main class="wrapper">
+      <div class="layout">
+        <!-- Основна стаття -->
+        <article class="card-main">
+          <span class="tag">Bem-estar • Pressão arterial</span>
+
+          <div class="meta-row">
+            <span>Leitura: 4–5 minutos</span>
+            <span class="meta-dot"></span>
+            <span>Para quem tem mais de 40 anos</span>
+          </div>
+
+          <h1>3 passos simples para apoiar a pressão arterial depois dos 40</h1>
+
+          <p class="lead">
+            Depois dos 40 anos é mais frequente notar oscilações de pressão, cabeça pesada
+            ao acordar, cansaço ao fim do dia. Muitas vezes isso está ligado não só à idade,
+            mas também ao stress constante, ao excesso de sal e à falta de movimento.
+          </p>
+
+          <div class="hero-highlight">
+            Não é necessário mudar completamente de vida num dia. Pequenos passos diários — um pouco
+            menos de sal, um pouco mais de movimento e apoio adequado — podem ajudar a sentir mais
+            equilíbrio e conforto.
+          </div>
+
+          <section class="section">
+            <h2>1. Ajustar o sal e a hidratação com calma</h2>
+            <p>
+              Em vez de dietas rígidas, é mais realista começar com pequenos gestos que, ao longo
+              das semanas, apoiam a pressão de forma suave:
+            </p>
+            <ul class="list">
+              <li>provar a comida antes de acrescentar sal automaticamente;</li>
+              <li>reduzir gradualmente enchidos, sopas instantâneas e comida muito processada;</li>
+              <li>beber água ao longo do dia em pequenos goles, não apenas à noite.</li>
+            </ul>
+            <p>
+              O objetivo não é “perfeição”, mas sim dar ao organismo menos sobrecarga diária,
+              para que o sistema cardiovascular trabalhe com mais tranquilidade.
+            </p>
+          </section>
+
+          <section class="section">
+            <h2>2. Movimento suave para “acordar” vasos e circulação</h2>
+            <p>
+              Caminhadas de 20–30 minutos num ritmo confortável, 4–5 vezes por semana, já podem:
+            </p>
+            <ul class="list">
+              <li>estimular a circulação de forma natural;</li>
+              <li>diminuir a sensação de peso na cabeça e nas pernas;</li>
+              <li>ajudar a manter a pressão dentro de níveis mais estáveis ao longo do dia.</li>
+            </ul>
+            <p>
+              Para quem não gosta de ginásios, é possível caminhar no bairro, subir escadas,
+              fazer alongamentos simples em casa ou pequenas pausas ativas no trabalho.
+            </p>
+          </section>
+
+          <section class="section">
+            <span class="pill-label">Apoio adicional</span>
+            <h2>3. Complexo natural diário como apoio extra</h2>
+            <p>
+              Além de ajustar alimentação e movimento, muitas pessoas escolhem um suplemento
+              natural específico para apoiar o coração e a pressão no dia a dia. Em geral,
+              estes complexos combinam:
+            </p>
+            <ul class="list">
+              <li>extratos de plantas associados tradicionalmente ao bem-estar cardiovascular;</li>
+              <li>vitaminas e minerais importantes para vasos sanguíneos e circulação;</li>
+              <li>fórmulas pensadas para uso contínuo, em doses práticas.</li>
+            </ul>
+
+            <div class="highlight">
+              Importante: suplementos não substituem acompanhamento médico nem medicamentos
+              prescritos. São uma forma adicional de cuidado diário para quem quer sentir
+              mais equilíbrio e conforto.
+            </div>
+          </section>
+
+          <div class="cta-block">
+            <div class="cta-title">Exemplo de um complexo natural popular em Portugal</div>
+            <div class="cta-text">
+              A nossa redação viu uma análise detalhada de um suplemento natural para pessoas
+              com tendência à pressão elevada e reuniu as informações mais úteis sobre a
+              composição, modo de uso e condições da oferta oficial.
+            </div>
+
+            <!-- 🔻 СЮДИ ВСТАВЛЯЄШ СВІЙ ПРЕЛЕНД WEBVORK -->
+            <a class="btn" href="https://pt-118-med.lifeblogeu.com/?utm_source=250581&utm_medium=cpc&utm_campaign=ww_nutra&utm_content=ad1&utm_term=age35-75+" target="_blank" rel="noopener">
+              Ver análise completa e oferta oficial
+            </a>
+
+            <div class="footer-note">
+              Este material tem caráter informativo e não substitui consulta com profissional de
+              saúde nem tratamento prescrito. Em caso de sintomas persistentes, procure aconselhamento
+              médico.
+            </div>
+          </div>
+        </article>
+
+        <!-- Сайдбар справа (тільки на десктопі) -->
+        <aside class="sidebar">
+          <div class="sidebar-card">
+            <div class="sidebar-title">Para quem é este artigo?</div>
+            <div class="sidebar-main">
+              Pessoas que sentem oscilações de pressão e querem começar por passos simples.
+            </div>
+            <ul class="sidebar-list">
+              <li>Idade a partir dos 40 anos;</li>
+              <li>Stress, cansaço, cabeça pesada;</li>
+              <li>Vontade de cuidar melhor da pressão no dia a dia.</li>
+            </ul>
+            <div class="sidebar-note">
+              As informações não substituem orientação médica. Em caso de dúvidas, fale com o
+              seu profissional de saúde.
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
